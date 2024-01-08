@@ -5,9 +5,9 @@ la diversité, l'efficacité du recrutement et les évaluations de performance.
 Ces données permettent aux RHs et aux managers de prendre des décisions éclairées et de planifier de façon stratégique les effectifs.
 
 
-------------------------------------------------------------------------------------------------------
-Questions
-------------------------------------------------------------------------------------------------------
+# Analyse Exploratoire 
+
+# a) Questions
 
 1) Quelle est la répartition de l'âge au sein de l'entreprise ?
    
@@ -31,10 +31,7 @@ Questions
     
 11) Comment le nombre d'embauches d'employés a-t-il varié au fil du temps ?
 
-------------------------------------------------------------------------------------------------------
-Insights
-------------------------------------------------------------------------------------------------------
-
+# b) Insignts après analyse
 1) Il y a plus d'employés masculins que d'employées féminines ou non conformes.
 
 2) Les genres sont répartis de manière assez équitable dans les différents départements. Globalement, il y a légèrement plus d'employés masculins.
@@ -62,10 +59,20 @@ Marketing Manager, Office Assistant IV, Associate Professor et VP of Training an
 11) Le nombre d'embauches d'employés a augmenté au fil des ans.
 
 
-I) Création de la base de données rh
 
-'''sql
-SELECT column1, column2
-FROM your_table
-WHERE condition = 'example';
-'''
+# A) Créer la base de données "rh"
+
+```sql
+
+-- DROP DATABASE IF EXISTS rh;  
+CREATE DATABASE rh
+    WITH
+    OWNER = serigne
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'en_US.UTF-8'
+    LC_CTYPE = 'en_US.UTF-8'
+    ICU_LOCALE = 'en-US'
+    LOCALE_PROVIDER = 'icu'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
